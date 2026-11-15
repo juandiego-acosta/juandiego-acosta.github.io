@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Dogtor Care · Propuesta de página web</title>
+<meta name="description" content="Propuesta de diseño de página web para Dogtor Care, hospital veterinario. Hecha por Juan Diego Acosta.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fffdfa;--soft:#fff3e8;--ink:#2a1c12;--muted:#6e5a4c;--pri:#e8620c;--pri-dark:#b94b06;--line:#f1e1d2;--cream:#ffe6d1;--teal:#127a74;--wa:#1fa855}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Nunito,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3{line-height:1.1;letter-spacing:-.01em;font-weight:900}
+
+.proposal{background:#14141a;color:#e8e8ee;font:500 .82rem/1.45 system-ui,sans-serif;padding:9px 20px;text-align:center}
+.proposal b{color:#fff}
+.proposal a{color:#9d9dff;text-decoration:none;font-weight:600;white-space:nowrap}
+
+.alert{background:var(--teal);color:#fff;font-weight:700;font-size:.92rem;text-align:center;padding:9px 20px}
+.alert a{color:#fff;white-space:nowrap}
+
+header{background:var(--bg);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:1.3rem;text-decoration:none;white-space:nowrap}
+.brand i{width:40px;height:40px;border-radius:50%;background:var(--pri);display:grid;place-items:center}
+.nav-links{display:flex;gap:28px;list-style:none;font-weight:700;color:var(--muted)}
+.nav-links a{text-decoration:none}
+.nav-links a:hover{color:var(--pri)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 22px;border-radius:999px;text-decoration:none;border:0;font:inherit;font-weight:800;cursor:pointer;transition:background .2s,transform .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-pri{background:var(--pri);color:#fff}
+.btn-pri:hover{background:var(--pri-dark)}
+.btn-teal{background:var(--teal);color:#fff}
+.btn-soft{background:var(--soft);color:var(--pri-dark)}
+
+.hero{padding:64px 0 84px;background:radial-gradient(circle at 85% 20%,var(--cream) 0 220px,transparent 221px),linear-gradient(180deg,var(--soft),var(--bg));overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px 6px 10px;font-size:.9rem;font-weight:700;margin-bottom:22px}
+.pill .stars{color:#f2a900;letter-spacing:1px}
+.hero h1{font-size:clamp(2.5rem,6.2vw,4.1rem)}
+.hero h1 span{color:var(--pri)}
+.hero p{color:var(--muted);font-size:1.15rem;margin:20px 0 26px;max-width:520px}
+.checks{list-style:none;display:grid;gap:10px;margin-bottom:30px}
+.checks li{display:flex;gap:10px;align-items:center;font-weight:700}
+.checks li::before{content:"";width:24px;height:24px;flex:none;border-radius:50%;background:var(--cream) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b94b06' stroke-width='3'%3E%3Cpath d='M6 12l4 4 8-8'/%3E%3C/svg%3E") center/14px no-repeat}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+
+.card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:30px;box-shadow:0 24px 60px -30px rgba(42,28,18,.35)}
+.card h2{font-size:1.5rem;margin-bottom:4px}
+.card .muted{color:var(--muted);font-size:.95rem;margin-bottom:20px}
+form{display:grid;gap:14px}
+label{display:grid;gap:6px;font-size:.88rem;font-weight:800}
+input,select{font:inherit;font-size:1rem;font-weight:600;padding:12px 14px;border:1.5px solid var(--line);border-radius:12px;background:#fffdfb;color:var(--ink);width:100%}
+input:focus,select:focus{outline:none;border-color:var(--pri);box-shadow:0 0 0 3px rgba(232,98,12,.15)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.small{font-size:.82rem;color:var(--muted);text-align:center}
+
+section{padding:88px 0}
+.center{text-align:center;max-width:640px;margin:0 auto 48px}
+.eyebrow{color:var(--pri);font-weight:900;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase}
+.center h2{font-size:clamp(2rem,4.5vw,2.8rem);margin:8px 0 12px}
+.center p{color:var(--muted)}
+
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.svc{background:#fff;border:1px solid var(--line);border-radius:22px;padding:26px;display:flex;flex-direction:column;transition:border-color .2s,box-shadow .2s}
+.svc:hover{border-color:var(--pri);box-shadow:0 18px 40px -28px rgba(232,98,12,.6)}
+.ico{width:50px;height:50px;border-radius:16px;background:var(--soft);display:grid;place-items:center;margin-bottom:16px}
+.svc h3{font-size:1.2rem;margin-bottom:6px}
+.svc p{color:var(--muted);font-size:.95rem;margin-bottom:14px;flex:1}
+.svc a{font-weight:800;color:var(--pri-dark);text-decoration:none;font-size:.95rem}
+
+.urgent{background:var(--teal);color:#fff;border-radius:28px;padding:44px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.urgent h2{font-size:clamp(1.7rem,4vw,2.4rem)}
+.urgent p{color:#cdeeea;margin-top:6px;font-weight:600}
+.urgent .btn{background:#fff;color:var(--teal);font-size:1.1rem;padding:16px 26px}
+
+.team{background:var(--soft)}
+.team-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}
+.portrait{aspect-ratio:4/5;border-radius:28px;border:2px dashed #efbe96;background:#fff;display:grid;place-items:center;text-align:center;color:var(--muted);padding:24px;font-weight:700}
+.portrait span{display:block;font-size:3rem;margin-bottom:8px;color:var(--pri)}
+.team-grid h2{font-size:clamp(2rem,4.5vw,2.6rem);margin:8px 0 14px}
+.team-grid p{color:var(--muted);margin-bottom:14px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+.stat{background:#fff;border-radius:16px;padding:16px;border:1px solid var(--line);min-width:0;overflow-wrap:anywhere}
+.stat b{display:block;font-size:1.6rem;color:var(--pri)}
+.stat span{font-size:.88rem;color:var(--muted);font-weight:600}
+
+.rating{max-width:760px;margin:0 auto;border:1px solid var(--line);border-radius:28px;padding:44px 32px;text-align:center;background:linear-gradient(180deg,#fff,var(--soft))}
+.rating .big{font-size:4.5rem;font-weight:900;line-height:1}
+.rating .stars{color:#f2a900;font-size:1.8rem;letter-spacing:4px;margin:8px 0}
+.rating p{color:var(--muted);margin:6px 0 24px;font-weight:600}
+
+.faq{max-width:760px;margin:0 auto;display:grid;gap:12px}
+details{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 22px}
+details[open]{border-color:var(--pri);background:var(--soft)}
+summary{font-weight:800;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--pri);font-size:1.4rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:var(--muted);margin-top:10px}
+
+.visit{display:grid;grid-template-columns:1fr 1.3fr;gap:24px}
+.visit .box{background:var(--ink);color:#fff;border-radius:24px;padding:32px}
+.visit h3{font-size:1.3rem;margin-bottom:12px;color:#ffb37f}
+.visit .box p{color:#e2d3c7;margin-bottom:22px}
+.visit .box small{display:block;color:#a8968a;font-size:.8rem;margin-top:-16px;margin-bottom:22px}
+.map{border-radius:24px;overflow:hidden;border:1px solid var(--line);min-height:320px}
+.map iframe{width:100%;height:100%;min-height:320px;border:0;display:block}
+
+footer{border-top:1px solid var(--line);padding:32px 0;text-align:center;color:var(--muted);font-size:.9rem}
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:30;width:58px;height:58px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 10px 28px -8px rgba(31,168,85,.9)}
+
+@media (max-width:900px){
+  .nav-links{display:none}
+  .hero-grid,.team-grid,.visit{grid-template-columns:1fr}
+  .services{grid-template-columns:1fr 1fr}
+  .portrait{max-width:320px;aspect-ratio:auto;min-height:220px}
+}
+@media (max-width:600px){
+  section{padding:64px 0}
+  .hero{padding:40px 0 64px}
+  .services{grid-template-columns:1fr}
+  .row{grid-template-columns:1fr}
+  .card{padding:22px}
+  .actions .btn{flex:1 1 100%}
+  .urgent{padding:32px 22px}
+  .urgent .btn{width:100%}
+  .stats{gap:8px}
+  .stat{padding:12px}
+  .stat b{font-size:1.25rem}
+  .rating{padding:36px 20px}
+  nav .btn{padding:11px 16px;font-size:.9rem}
+}
+</style>
+</head>
+<body>
+<div class="proposal"><b>Propuesta de diseño para Dogtor Care</b>, hecha por Juan Diego Acosta. No es el sitio oficial; textos y servicios de ejemplo. · <a href="../../">Ver portafolio</a></div>
+<div class="alert">¿Urgencia con tu mascota? Llama ahora: <a href="tel:+523331126142">33 3112 6142</a></div>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="#"><i><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><ellipse cx="6" cy="9" rx="2.2" ry="2.8"/><ellipse cx="10" cy="5.5" rx="2.2" ry="2.8"/><ellipse cx="14" cy="5.5" rx="2.2" ry="2.8"/><ellipse cx="18" cy="9" rx="2.2" ry="2.8"/><path d="M12 11c-3 0-6 3.6-6 6.3 0 1.9 1.4 2.7 3 2.7 1.3 0 2-.7 3-.7s1.7.7 3 .7c1.6 0 3-.8 3-2.7C18 14.6 15 11 12 11z"/></svg></i>Dogtor Care</a>
+      <ul class="nav-links">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#resenas">Reseñas</a></li>
+        <li><a href="#ubicacion">Ubicación</a></li>
+      </ul>
+      <a class="btn btn-pri" href="#cita">Agendar</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="cita">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="pill"><span class="stars">★★★★★</span> 4.8 en Google · 746 reseñas</span>
+        <h1>Hospital veterinario <span>abierto las 24 horas.</span></h1>
+        <p>De día o de noche, tu mascota está en buenas manos. Estamos en Av. Fray Antonio Alcalde 2179, Guadalajara.</p>
+        <ul class="checks">
+          <li>Abierto las 24 horas</li>
+          <li>4.8 en Google con 746 reseñas</li>
+          <li>Av. Fray Antonio Alcalde 2179, Guadalajara</li>
+        </ul>
+        <div class="actions">
+          <a class="btn btn-teal" href="tel:+523331126142">Llamar ahora</a>
+          <a class="btn btn-soft" href="#servicios">Ver servicios</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Agenda una consulta</h2>
+        <p class="muted">Cuéntanos de tu mascota y te llevamos a WhatsApp con el mensaje listo.</p>
+        <form id="form">
+          <label>Tu nombre<input name="nombre" required placeholder="¿Cómo te llamas?" autocomplete="given-name"></label>
+          <div class="row">
+            <label>Tu mascota<input name="mascota" required placeholder="Ej. Firulais"></label>
+            <label>Es un…
+              <select name="especie">
+                <option>perro</option>
+                <option>gato</option>
+                <option>otra especie</option>
+              </select>
+            </label>
+          </div>
+          <label>¿Qué necesita?
+            <select name="motivo">
+              <option>Consulta general</option>
+              <option>Vacunas</option>
+              <option>Desparasitación</option>
+              <option>Esterilización</option>
+              <option>Es una urgencia</option>
+              <option>Otro</option>
+            </select>
+          </label>
+          <button class="btn btn-pri" type="submit">Enviar por WhatsApp</button>
+          <p class="small">Si es una urgencia grave, mejor llámanos.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicios">
+    <div class="wrap">
+      <div class="center">
+        <span class="eyebrow">Servicios</span>
+        <h2>Todo lo que tu mascota necesita</h2>
+        <p>Pregunta por cualquier servicio y te respondemos por WhatsApp.</p>
+      </div>
+      <div class="services">
+        <div class="svc"><div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e8620c" stroke-width="2"><path d="M4.8 2.3A.3.3 0 105 2H4a2 2 0 00-2 2v5a6 6 0 006 6 6 6 0 006-6V4a2 2 0 00-2-2h-1a.2.2 0 10.3.3"/><path d="M8 15v1a6 6 0 006 6 6 6 0 006-6v-4"/><circle cx="20" cy="10" r="2"/></svg></div><h3>Consulta general</h3><p>Revisión completa y diagnóstico para perros, gatos y más.</p><a href="https://wa.me/523331126142?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20una%20consulta%20general" target="_blank" rel="noopener">Preguntar →</a></div>
+        <div class="svc"><div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e8620c" stroke-width="2"><path d="M18 2l4 4M17 7l3-3M19 9L8.7 19.3a1 1 0 01-1.4 0l-3.6-3.6a1 1 0 010-1.4L14 4M9 11l4 4M5 19l-3 3M14 4l6 6"/></svg></div><h3>Vacunas</h3><p>Esquema de vacunación al día y cartilla para tu mascota.</p><a href="https://wa.me/523331126142?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20vacunas" target="_blank" rel="noopener">Preguntar →</a></div>
+        <div class="svc"><div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e8620c" stroke-width="2"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4"/></svg></div><h3>Urgencias 24 horas</h3><p>Atención inmediata cuando más lo necesitas, a cualquier hora.</p><a href="tel:+523331126142">Llamar ahora →</a></div>
+        <div class="svc"><div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e8620c" stroke-width="2"><path d="M12 3v18M3 12h18"/></svg></div><h3>Cirugía y esterilización</h3><p>Procedimientos con anestesia y seguimiento cuidadoso.</p><a href="https://wa.me/523331126142?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20cirug%C3%ADa%20o%20esterilizaci%C3%B3n" target="_blank" rel="noopener">Preguntar →</a></div>
+        <div class="svc"><div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e8620c" stroke-width="2"><path d="M2 20V8l10-5 10 5v12"/><path d="M6 20v-7h12v7M2 20h20"/></svg></div><h3>Hospitalización</h3><p>Cuidado y monitoreo para pacientes que necesitan quedarse.</p><a href="https://wa.me/523331126142?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20hospitalizaci%C3%B3n" target="_blank" rel="noopener">Preguntar →</a></div>
+        <div class="svc"><div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e8620c" stroke-width="2"><path d="M9 3h6M10 3v6L4 19a1 1 0 001 2h14a1 1 0 001-2l-6-10V3"/><path d="M7 15h10"/></svg></div><h3>Desparasitación</h3><p>Protección interna y externa contra parásitos.</p><a href="https://wa.me/523331126142?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20desparasitaci%C3%B3n" target="_blank" rel="noopener">Preguntar →</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="urgent">
+        <div>
+          <h2>¿Tu mascota tiene una urgencia?</h2>
+          <p>Llámanos mientras vienes en camino para tener todo listo.</p>
+        </div>
+        <a class="btn" href="tel:+523331126142">📞 33 3112 6142</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="team" id="equipo">
+    <div class="wrap team-grid">
+      <div class="portrait"><div><span>＋</span>Aquí va la foto del equipo veterinario</div></div>
+      <div>
+        <span class="eyebrow">Quién cuida a tu mascota</span>
+        <h2>Un equipo que la trata como de la familia</h2>
+        <p>En esta sección presentamos a los médicos veterinarios: su formación, sus especialidades y el cariño con el que tratan a cada paciente.</p>
+        <p>Es lo que más revisa un dueño antes de confiarles a su mascota.</p>
+        <div class="stats">
+          <div class="stat"><b>4.8★</b><span>en Google</span></div>
+          <div class="stat"><b>746</b><span>reseñas</span></div>
+          <div class="stat"><b>24 h</b><span>abierto</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resenas">
+    <div class="wrap">
+      <div class="rating">
+        <span class="eyebrow">Lo que dicen los dueños</span>
+        <div class="big">4.8</div>
+        <div class="stars">★★★★★</div>
+        <p>746 reseñas en Google</p>
+        <a class="btn btn-pri" href="https://www.google.com/maps/search/?api=1&query=Dogtor%20Care%20hospital%20veterinario%2024%20horas%20Fray%20Antonio%20Alcalde%202179" target="_blank" rel="noopener">Leer las reseñas en Google</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="preguntas" style="padding-top:0">
+    <div class="wrap">
+      <div class="center">
+        <span class="eyebrow">Preguntas frecuentes</span>
+        <h2>Resolvemos tus dudas</h2>
+      </div>
+      <div class="faq">
+        <details open><summary>¿Qué hago si mi mascota tiene una urgencia?</summary><p>Llámanos al 33 3112 6142 mientras vienes en camino. Así tenemos todo listo para atenderla en cuanto llegues.</p></details>
+        <details><summary>¿Cómo agendo una consulta?</summary><p>Llena el formulario de arriba o escríbenos por WhatsApp. Te respondemos con los horarios disponibles.</p></details>
+        <details><summary>¿Dónde están?</summary><p>En Av. Fray Antonio Alcalde 2179, Guadalajara, Jalisco. Abajo está el mapa para llegar.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="ubicacion" style="padding-top:0">
+    <div class="wrap visit">
+      <div class="box">
+        <h3>Horario</h3>
+        <p>Abierto las 24 horas*</p>
+        <small>*Según su ficha de Google Maps.</small>
+        <h3>Dirección</h3>
+        <p>Av. Fray Antonio Alcalde 2179<br>Guadalajara, Jalisco</p>
+        <h3>Teléfono</h3>
+        <p style="margin-bottom:0"><a href="tel:+523331126142" style="color:#fff">33 3112 6142</a></p>
+      </div>
+      <div class="map"><iframe title="Mapa de ubicación" loading="lazy" src="https://maps.google.com/maps?q=Dogtor%20Care%20hospital%20veterinario%2C%20Av.%20Fray%20Antonio%20Alcalde%202179%2C%20Guadalajara&z=16&output=embed"></iframe></div>
+    </div>
+  </section>
+</main>
+
+<footer>Propuesta de diseño para Dogtor Care · Hecha por <a href="../../">Juan Diego Acosta</a>, desarrollo web en Guadalajara</footer>
+
+<a class="wa-float" href="https://wa.me/523331126142?text=Hola%2C%20quiero%20agendar%20una%20consulta%20para%20mi%20mascota" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2z"/></svg>
+</a>
+
+<script>
+const tel = '523331126142';
+const form = document.getElementById('form');
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  const d = new FormData(form);
+  const esp = d.get('especie') === 'otra especie' ? 'mascota' : d.get('especie');
+  const msg = `Hola, soy ${d.get('nombre')}. Mi ${esp} se llama ${d.get('mascota')} y necesita: ${d.get('motivo')}. ¿Cuándo nos pueden atender?`;
+  window.open(`https://wa.me/${tel}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
+});
+</script>
+</body>
+</html>
