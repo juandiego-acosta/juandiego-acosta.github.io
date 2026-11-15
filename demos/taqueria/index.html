@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Taquería La Brasa · Tacos al pastor</title>
+<meta name="description" content="Tacos al pastor, suadero y especialidades al carbón. Pide por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#fbf3e6;--paper:#fffaf1;--ink:#2a1410;--muted:#7a5a4f;--red:#c8321f;--red-dark:#9e2414;--yellow:#f2b632;--line:#ecdcc4;--wa:#1fa855}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"DM Sans",system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.55}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.display{font-family:Anton,Impact,sans-serif;text-transform:uppercase;letter-spacing:.01em;line-height:.95}
+
+.demo-bar{background:#14141a;color:#e8e8ee;font:500 .82rem/1.4 system-ui,sans-serif;padding:8px 20px;text-align:center}
+.demo-bar a{color:#9d9dff;text-decoration:none;font-weight:600}
+
+nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.brand{font-family:Anton,sans-serif;font-size:1.6rem;text-transform:uppercase;text-decoration:none;color:var(--red)}
+.brand span{color:var(--ink)}
+.nav-links{display:flex;gap:26px;list-style:none;font-weight:500}
+.nav-links a{text-decoration:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:700;text-decoration:none;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 6px 0 var(--red-dark)}
+.btn-line{border:2px solid var(--ink)}
+.btn-wa{background:var(--wa);color:#fff}
+
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;padding-top:48px;padding-bottom:80px}
+.status{display:inline-flex;align-items:center;gap:8px;background:var(--paper);border:1px solid var(--line);padding:7px 14px;border-radius:999px;font-weight:700;font-size:.9rem;margin-bottom:22px}
+.dot{width:9px;height:9px;border-radius:50%;background:#aaa}
+.dot.open{background:#1fa855;box-shadow:0 0 0 4px rgba(31,168,85,.2)}
+.dot.closed{background:var(--red)}
+.hero h1{font-size:clamp(3.4rem,10vw,7rem);color:var(--red)}
+.hero h1 span{color:var(--ink);display:block}
+.hero p{font-size:1.15rem;color:var(--muted);margin:22px 0 30px;max-width:460px}
+.actions{display:flex;gap:14px;flex-wrap:wrap}
+.sun{position:relative;aspect-ratio:1;border-radius:50%;background:var(--yellow);display:grid;place-items:center;text-align:center;max-width:380px;justify-self:end;width:100%}
+.sun::before{content:"";position:absolute;inset:-18px;border-radius:50%;border:3px dashed var(--red);animation:spin 40s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.sun small{display:block;font-weight:700;letter-spacing:.15em;text-transform:uppercase;font-size:.85rem}
+.sun b{font-family:Anton,sans-serif;font-size:clamp(4rem,9vw,6.5rem);line-height:1;color:var(--red)}
+.sun em{font-style:normal;font-weight:500}
+
+.strip{background:var(--red);color:var(--cream);overflow:hidden;white-space:nowrap;padding:14px 0;font-family:Anton,sans-serif;font-size:1.4rem;text-transform:uppercase;letter-spacing:.04em}
+.strip div{display:inline-block;animation:marquee 30s linear infinite}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+section{padding:84px 0}
+.title{font-size:clamp(2.6rem,6vw,4rem);margin-bottom:10px}
+.sub{color:var(--muted);margin-bottom:40px;font-size:1.05rem}
+.menu{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.menu-col{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:28px}
+.menu-col h3{font-family:Anton,sans-serif;text-transform:uppercase;font-size:1.6rem;color:var(--red);margin-bottom:18px}
+.item{display:flex;align-items:baseline;gap:8px;padding:9px 0}
+.item .name{font-weight:700}
+.item .name small{display:block;font-weight:400;color:var(--muted);font-size:.85rem}
+.item .fill{flex:1;border-bottom:2px dotted #d7c3a6;transform:translateY(-4px)}
+.item .price{font-weight:700}
+.hot{background:var(--yellow);color:var(--ink);font-size:.68rem;font-weight:700;text-transform:uppercase;padding:2px 7px;border-radius:999px;margin-left:6px;vertical-align:2px}
+
+.info{display:grid;grid-template-columns:1fr 1.3fr;gap:24px}
+.box{background:var(--ink);color:var(--cream);border-radius:20px;padding:32px}
+.box h3{font-family:Anton,sans-serif;text-transform:uppercase;font-size:1.7rem;color:var(--yellow);margin-bottom:16px}
+.hours{list-style:none;display:grid;gap:8px;margin-bottom:26px}
+.hours li{display:flex;justify-content:space-between;border-bottom:1px solid rgba(251,243,230,.15);padding-bottom:8px}
+.hours li.today{color:var(--yellow);font-weight:700}
+.box p{color:#d9c7b5;margin-bottom:6px}
+.map{border-radius:20px;overflow:hidden;border:1px solid var(--line);min-height:340px}
+.map iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+
+footer{padding:40px 0;text-align:center;color:var(--muted);font-size:.9rem}
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:30;background:var(--wa);color:#fff;font-weight:700;text-decoration:none;padding:14px 20px;border-radius:999px;box-shadow:0 10px 30px -8px rgba(31,168,85,.9);display:flex;align-items:center;gap:8px}
+
+@media (max-width:860px){
+  .nav-links{display:none}
+  .hero{grid-template-columns:1fr;padding-top:24px}
+  .sun{justify-self:center;max-width:280px;margin-top:20px}
+  .menu,.info{grid-template-columns:1fr}
+}
+@media (max-width:520px){
+  section{padding:60px 0}
+  .actions .btn{flex:1 1 100%}
+  .wa-float span{display:none}
+  .wa-float{padding:16px}
+}
+</style>
+</head>
+<body>
+<div class="demo-bar">Sitio de demostración hecho por Juan Diego Acosta · <a href="../../">Volver al portafolio</a></div>
+
+<header class="wrap">
+  <nav>
+    <a class="brand" href="#">La <span>Brasa</span></a>
+    <ul class="nav-links">
+      <li><a href="#menu">Menú</a></li>
+      <li><a href="#visitanos">Visítanos</a></li>
+    </ul>
+    <a class="btn btn-wa" href="https://wa.me/523327133624?text=Hola%20La%20Brasa%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener">Pedir</a>
+  </nav>
+</header>
+
+<main>
+  <section class="wrap hero" style="padding-top:32px">
+    <div>
+      <span class="status"><i class="dot" id="dot"></i><span id="status">Horario: 6:00 pm – 1:00 am</span></span>
+      <h1 class="display">Tacos al pastor <span>al carbón</span></h1>
+      <p>Trompo marinado desde la mañana, tortilla hecha a mano y salsas de la casa. Para comer aquí, llevar o a domicilio.</p>
+      <div class="actions">
+        <a class="btn btn-red" href="#menu">Ver el menú</a>
+        <a class="btn btn-line" href="https://wa.me/523327133624?text=Hola%20La%20Brasa%2C%20quiero%20hacer%20un%20pedido%20a%20domicilio" target="_blank" rel="noopener">Pedir a domicilio</a>
+      </div>
+    </div>
+    <div class="sun">
+      <div><small>Orden de pastor</small><b>$22</b><em>por taco</em></div>
+    </div>
+  </section>
+
+  <div class="strip" aria-hidden="true"><div>Pastor ★ Suadero ★ Bistec ★ Campechano ★ Gringas ★ Quesadillas ★ Aguas frescas ★ Pastor ★ Suadero ★ Bistec ★ Campechano ★ Gringas ★ Quesadillas ★ Aguas frescas ★&nbsp;</div></div>
+
+  <section id="menu">
+    <div class="wrap">
+      <h2 class="display title">El menú</h2>
+      <p class="sub">Precios por pieza. Todos los tacos llevan cebolla, cilantro y piña (si quieres).</p>
+      <div class="menu">
+        <div class="menu-col">
+          <h3>Tacos</h3>
+          <div class="item"><span class="name">Pastor<span class="hot">Favorito</span></span><span class="fill"></span><span class="price">$22</span></div>
+          <div class="item"><span class="name">Suadero</span><span class="fill"></span><span class="price">$24</span></div>
+          <div class="item"><span class="name">Bistec</span><span class="fill"></span><span class="price">$24</span></div>
+          <div class="item"><span class="name">Campechano</span><span class="fill"></span><span class="price">$26</span></div>
+          <div class="item"><span class="name">Costilla<small>Con cebollitas asadas</small></span><span class="fill"></span><span class="price">$32</span></div>
+        </div>
+        <div class="menu-col">
+          <h3>De la casa</h3>
+          <div class="item"><span class="name">Gringa<small>Harina, queso y pastor</small></span><span class="fill"></span><span class="price">$55</span></div>
+          <div class="item"><span class="name">Quesadilla<span class="hot">Nuevo</span><small>Con el guisado que quieras</small></span><span class="fill"></span><span class="price">$45</span></div>
+          <div class="item"><span class="name">Volcán<small>Tostada, queso gratinado y carne</small></span><span class="fill"></span><span class="price">$38</span></div>
+          <div class="item"><span class="name">Orden para 2<small>12 tacos surtidos y 2 bebidas</small></span><span class="fill"></span><span class="price">$290</span></div>
+        </div>
+        <div class="menu-col">
+          <h3>Bebidas</h3>
+          <div class="item"><span class="name">Agua de horchata</span><span class="fill"></span><span class="price">$30</span></div>
+          <div class="item"><span class="name">Agua de jamaica</span><span class="fill"></span><span class="price">$30</span></div>
+          <div class="item"><span class="name">Refresco</span><span class="fill"></span><span class="price">$28</span></div>
+          <div class="item"><span class="name">Cerveza</span><span class="fill"></span><span class="price">$45</span></div>
+          <div class="item"><span class="name">Michelada</span><span class="fill"></span><span class="price">$70</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="visitanos" style="padding-top:0">
+    <div class="wrap">
+      <h2 class="display title">Visítanos</h2>
+      <p class="sub">Estacionamiento en la calle. Aceptamos efectivo, tarjeta y transferencia.</p>
+      <div class="info">
+        <div class="box">
+          <h3>Horario</h3>
+          <ul class="hours" id="hours">
+            <li data-d="1"><span>Lunes</span><span>6:00 pm – 1:00 am</span></li>
+            <li data-d="2"><span>Martes</span><span>6:00 pm – 1:00 am</span></li>
+            <li data-d="3"><span>Miércoles</span><span>6:00 pm – 1:00 am</span></li>
+            <li data-d="4"><span>Jueves</span><span>6:00 pm – 1:00 am</span></li>
+            <li data-d="5"><span>Viernes</span><span>6:00 pm – 1:00 am</span></li>
+            <li data-d="6"><span>Sábado</span><span>6:00 pm – 1:00 am</span></li>
+            <li data-d="0"><span>Domingo</span><span>6:00 pm – 1:00 am</span></li>
+          </ul>
+          <h3>Dirección</h3>
+          <p>Av. Ejemplo 123, Col. Centro<br>Guadalajara, Jalisco</p>
+        </div>
+        <div class="map">
+          <iframe title="Mapa de ubicación" loading="lazy" src="https://maps.google.com/maps?q=Centro%2C%20Guadalajara%2C%20Jalisco&z=15&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>© <span class="y"></span> Taquería La Brasa · Negocio ficticio para demostración</footer>
+
+<a class="wa-float" href="https://wa.me/523327133624?text=Hola%20La%20Brasa%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener" aria-label="Pedir por WhatsApp">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2z"/></svg><span>Pedir por WhatsApp</span>
+</a>
+
+<script>
+// Abierto de 18:00 a 01:00 todos los días
+const now = new Date(), h = now.getHours();
+const open = h >= 18 || h < 1;
+document.getElementById('dot').className = 'dot ' + (open ? 'open' : 'closed');
+document.getElementById('status').textContent = open ? 'Abierto ahora · cerramos a la 1:00 am' : 'Cerrado ahora · abrimos a las 6:00 pm';
+// Resaltar el día de hoy (después de medianoche cuenta como el día anterior)
+const day = (h < 1 ? (now.getDay() + 6) % 7 : now.getDay());
+const li = document.querySelector('#hours li[data-d="' + day + '"]');
+if (li) li.classList.add('today');
+document.querySelectorAll('.y').forEach(e => e.textContent = now.getFullYear());
+</script>
+</body>
+</html>

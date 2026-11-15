@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Juan Diego Acosta · Páginas web para negocios</title>
+<meta name="description" content="Desarrollo páginas web rápidas y profesionales para negocios en Guadalajara: listas para celular, con WhatsApp y Google Maps.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=Anton&family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fafaf7; --surface:#fff; --ink:#14141a; --muted:#5b5b66; --line:#e6e4dc;
+  --accent:#3b3bf5; --accent-soft:#ececff; --wa:#1fa855;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:"Space Grotesk",Inter,sans-serif;line-height:1.1;letter-spacing:-.02em}
+section{padding:88px 0}
+.eyebrow{display:inline-block;font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.section-title{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:14px}
+.section-sub{color:var(--muted);max-width:620px;font-size:1.05rem}
+
+/* Header */
+header{position:sticky;top:0;z-index:20;background:rgba(250,250,247,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.logo{font-family:"Space Grotesk";font-weight:700;text-decoration:none;font-size:1.15rem;white-space:nowrap}
+.logo span{color:var(--accent)}
+.nav ul{display:flex;gap:28px;list-style:none}
+.nav ul a{text-decoration:none;color:var(--muted);font-weight:500;font-size:.95rem}
+.nav ul a:hover{color:var(--ink)}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 22px;border-radius:10px;font-weight:600;text-decoration:none;border:1px solid transparent;transition:transform .15s,box-shadow .15s;font-size:1rem;cursor:pointer}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 8px 24px -10px rgba(59,59,245,.8)}
+.btn-ghost{border-color:var(--line);background:var(--surface)}
+.btn-wa{background:var(--wa);color:#fff;box-shadow:0 8px 24px -10px rgba(31,168,85,.8)}
+.nav .btn{padding:9px 16px;font-size:.9rem}
+
+/* Hero */
+.hero{padding:96px 0 72px}
+.hero h1{font-size:clamp(2.4rem,6vw,4.4rem);max-width:820px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p{font-size:clamp(1.05rem,2vw,1.25rem);color:var(--muted);max-width:620px;margin:22px 0 32px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:40px}
+.chip{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:.9rem;font-weight:500}
+.chip b{color:var(--accent)}
+
+/* Projects */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s;text-decoration:none}
+a.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px -20px rgba(20,20,26,.35)}
+.browser{border-bottom:1px solid var(--line)}
+.browser-bar{display:flex;gap:6px;padding:10px 12px;background:#f1f0ea}
+.browser-bar i{width:9px;height:9px;border-radius:50%;background:#d6d3c8}
+.preview{height:180px;display:flex;flex-direction:column;justify-content:center;padding:22px;position:relative;overflow:hidden}
+.preview small{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;opacity:.8;margin-bottom:6px}
+.pv-taco{background:#fbf3e6;color:#2a1410}
+.pv-taco strong{font-family:Anton,sans-serif;font-size:2.1rem;line-height:1;color:#c8321f;text-transform:uppercase}
+.pv-taco::after{content:"";position:absolute;right:-30px;bottom:-30px;width:130px;height:130px;border-radius:50%;background:#f2b632}
+.pv-barber{background:#111;color:#f2efe8}
+.pv-barber strong{font-family:"Playfair Display",serif;font-size:2rem;line-height:1.05}
+.pv-barber strong span{color:#c9a45c}
+.pv-barber::after{content:"";position:absolute;right:22px;top:22px;bottom:22px;width:3px;background:repeating-linear-gradient(#c9a45c 0 12px,transparent 12px 20px)}
+.pv-dental{background:linear-gradient(135deg,#e6f4f5,#fff);color:#0f2a33}
+.pv-dental strong{font-family:"Plus Jakarta Sans",sans-serif;font-size:1.7rem;line-height:1.1}
+.pv-dental strong span{color:#0e7c86}
+.pv-dental::after{content:"Agenda tu cita →";position:absolute;right:18px;bottom:18px;background:#0e7c86;color:#fff;font:600 .72rem Inter,sans-serif;padding:7px 12px;border-radius:999px}
+.card-body{padding:20px 22px 24px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card-body h3{font-size:1.2rem}
+.card-body p{color:var(--muted);font-size:.95rem;flex:1}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.tag{font-size:.75rem;font-weight:600;background:var(--accent-soft);color:var(--accent);padding:4px 9px;border-radius:6px}
+.card-link{font-weight:600;color:var(--accent);margin-top:10px}
+
+/* Features */
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-top:44px}
+.feature{background:var(--surface);padding:28px}
+.feature h3{font-size:1.1rem;margin-bottom:8px;display:flex;align-items:center;gap:10px}
+.feature h3::before{content:"";width:10px;height:10px;border-radius:3px;background:var(--accent);flex:none}
+.feature p{color:var(--muted);font-size:.95rem}
+
+/* Pricing */
+.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px;align-items:stretch}
+.plan{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:30px 26px;display:flex;flex-direction:column;position:relative}
+.plan.featured{border:2px solid var(--accent);box-shadow:0 24px 48px -28px rgba(59,59,245,.7)}
+.badge{position:absolute;top:-13px;left:26px;background:var(--accent);color:#fff;font-size:.75rem;font-weight:600;padding:4px 12px;border-radius:999px}
+.plan h3{font-size:1.2rem}
+.plan .for{color:var(--muted);font-size:.9rem;margin:4px 0 18px}
+.price{font-family:"Space Grotesk";font-size:2.3rem;font-weight:700;letter-spacing:-.03em}
+.price small{font-family:Inter;font-size:.9rem;font-weight:500;color:var(--muted);letter-spacing:0}
+.plan ul{list-style:none;margin:20px 0 26px;display:grid;gap:10px;flex:1}
+.plan li{padding-left:26px;position:relative;font-size:.95rem}
+.plan li::before{content:"";position:absolute;left:2px;top:7px;width:12px;height:7px;border-left:2px solid var(--wa);border-bottom:2px solid var(--wa);transform:rotate(-45deg)}
+.extra{margin-top:22px;background:var(--surface);border:1px dashed #c9c6ba;border-radius:14px;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.extra p{color:var(--muted);font-size:.95rem}
+.extra strong{color:var(--ink)}
+.note{color:var(--muted);font-size:.85rem;margin-top:14px}
+
+/* Process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:44px;counter-reset:s}
+.step{counter-increment:s}
+.step::before{content:counter(s,decimal-leading-zero);font-family:"Space Grotesk";font-weight:700;font-size:2.4rem;color:var(--accent);display:block;margin-bottom:8px;opacity:.9}
+.step h3{font-size:1.1rem;margin-bottom:6px}
+.step p{color:var(--muted);font-size:.95rem}
+
+/* About */
+.about{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center}
+.avatar{width:160px;height:160px;border-radius:24px;background:linear-gradient(135deg,var(--accent),#8f8ffb);display:grid;place-items:center;color:#fff;font-family:"Space Grotesk";font-size:3rem;font-weight:700}
+.about p{color:var(--muted);margin-top:12px;max-width:640px}
+.stack{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.stack span{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:5px 10px;font-size:.85rem;font-weight:500}
+
+/* Contact */
+.cta{background:var(--ink);color:#fff;border-radius:24px;padding:56px 40px;text-align:center}
+.cta h2{font-size:clamp(1.8rem,4vw,2.8rem)}
+.cta p{color:#b9b9c6;margin:14px auto 28px;max-width:520px}
+.cta .hero-actions{justify-content:center}
+.cta .btn-ghost{background:transparent;color:#fff;border-color:#3a3a46}
+footer{padding:36px 0;color:var(--muted);font-size:.9rem;text-align:center}
+
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:30;width:58px;height:58px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 10px 28px -8px rgba(31,168,85,.9);transition:transform .15s}
+.wa-float:hover{transform:scale(1.06)}
+
+@media (max-width:900px){
+  .grid-3,.pricing{grid-template-columns:1fr}
+  .features{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .nav ul{display:none}
+}
+@media (max-width:600px){
+  section{padding:64px 0}
+  .hero{padding:56px 0 40px}
+  .features,.steps{grid-template-columns:1fr}
+  .about{grid-template-columns:1fr;gap:24px}
+  .avatar{width:110px;height:110px;font-size:2.2rem}
+  .hero-actions .btn{flex:1 1 100%}
+  .cta{padding:44px 22px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#">juandiego<span>.</span>dev</a>
+    <ul>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#paquetes">Paquetes</a></li>
+      <li><a href="#proceso">Cómo trabajo</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <a class="btn btn-wa" href="https://wa.me/523327133624?text=Hola%2C%20vi%20tu%20portafolio%20y%20me%20interesa%20una%20p%C3%A1gina%20web" target="_blank" rel="noopener">Cotizar</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Desarrollo web para negocios en Guadalajara</span>
+      <h1>Páginas web que le traen <em>clientes</em> a tu negocio.</h1>
+      <p>Diseño y programo sitios rápidos, que se ven increíbles en el celular y que llevan a tus clientes directo a tu WhatsApp. Precio fijo, sin letras chiquitas.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#proyectos">Ver ejemplos</a>
+        <a class="btn btn-ghost" href="#paquetes">Ver precios</a>
+      </div>
+      <div class="chips">
+        <span class="chip"><b>5–7 días</b> de entrega</span>
+        <span class="chip">Hecha para <b>celular</b></span>
+        <span class="chip">Botón de <b>WhatsApp</b></span>
+        <span class="chip"><b>50%</b> al iniciar, 50% al entregar</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="proyectos" style="padding-top:24px">
+    <div class="wrap">
+      <span class="eyebrow">Proyectos</span>
+      <h2 class="section-title">Ejemplos de lo que puedo hacer por tu negocio</h2>
+      <p class="section-sub">Tres sitios de demostración, cada uno con un estilo distinto. Ábrelos desde tu celular: así los van a ver tus clientes.</p>
+
+      <div class="grid-3">
+        <a class="card" href="demos/taqueria/">
+          <div class="browser">
+            <div class="browser-bar"><i></i><i></i><i></i></div>
+            <div class="preview pv-taco"><small>Taquería · Restaurante</small><strong>Tacos al<br>pastor</strong></div>
+          </div>
+          <div class="card-body">
+            <h3>Taquería La Brasa</h3>
+            <p>Menú con precios, aviso automático de "abierto / cerrado", pedidos por WhatsApp y mapa de ubicación.</p>
+            <div class="tags"><span class="tag">Menú digital</span><span class="tag">Pedidos</span><span class="tag">Google Maps</span></div>
+            <span class="card-link">Ver demo →</span>
+          </div>
+        </a>
+
+        <a class="card" href="demos/barberia/">
+          <div class="browser">
+            <div class="browser-bar"><i></i><i></i><i></i></div>
+            <div class="preview pv-barber"><small>Barbería · Estética</small><strong>Cortes con<br><span>oficio.</span></strong></div>
+          </div>
+          <div class="card-body">
+            <h3>Navaja Barber Club</h3>
+            <p>Servicios con precio y duración, equipo de barberos y un formulario que arma la cita y la manda por WhatsApp.</p>
+            <div class="tags"><span class="tag">Agenda de citas</span><span class="tag">Modo oscuro</span><span class="tag">Reseñas</span></div>
+            <span class="card-link">Ver demo →</span>
+          </div>
+        </a>
+
+        <a class="card" href="demos/dental/">
+          <div class="browser">
+            <div class="browser-bar"><i></i><i></i><i></i></div>
+            <div class="preview pv-dental"><small>Salud · Consultorio</small><strong>Tu sonrisa,<br><span>en buenas manos</span></strong></div>
+          </div>
+          <div class="card-body">
+            <h3>Clínica Dental Sonríe</h3>
+            <p>Tratamientos con precio desde, perfil de la doctora, preguntas frecuentes y formulario de cita directo a WhatsApp.</p>
+            <div class="tags"><span class="tag">Formulario</span><span class="tag">FAQ</span><span class="tag">Confianza</span></div>
+            <span class="card-link">Ver demo →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:24px">
+    <div class="wrap">
+      <span class="eyebrow">Qué incluye</span>
+      <h2 class="section-title">Todo lo que tu página necesita para vender</h2>
+      <div class="features">
+        <div class="feature"><h3>Diseño para celular</h3><p>La mayoría de tus clientes te buscan desde el teléfono. Tu página se ve perfecta en cualquier pantalla.</p></div>
+        <div class="feature"><h3>Directo a WhatsApp</h3><p>Botones y formularios que abren una conversación contigo con el mensaje ya escrito.</p></div>
+        <div class="feature"><h3>Ubicación y horarios</h3><p>Mapa de Google, dirección y horario siempre visibles para que lleguen sin perderse.</p></div>
+        <div class="feature"><h3>Carga rapidísimo</h3><p>Código limpio, sin plantillas pesadas. Una página lenta es un cliente que se va.</p></div>
+        <div class="feature"><h3>Aparece en Google</h3><p>Configuración de SEO básico y de tu perfil de Google Maps para que te encuentren.</p></div>
+        <div class="feature"><h3>Dominio propio</h3><p>Te ayudo a tener tu dirección tunegocio.com.mx y a ponerla en línea.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="paquetes">
+    <div class="wrap">
+      <span class="eyebrow">Paquetes</span>
+      <h2 class="section-title">Precios claros, desde el inicio</h2>
+      <p class="section-sub">Pagas una vez por la página. El mantenimiento es opcional.</p>
+
+      <div class="pricing">
+        <div class="plan">
+          <h3>Básico</h3>
+          <p class="for">Para empezar a tener presencia en internet</p>
+          <div class="price">$2,500 <small>MXN</small></div>
+          <ul>
+            <li>Página de una sección (landing)</li>
+            <li>Diseño para celular y computadora</li>
+            <li>Botón de WhatsApp y llamada</li>
+            <li>Mapa de Google y horarios</li>
+            <li>Publicación en internet</li>
+          </ul>
+          <a class="btn btn-ghost" href="#contacto">Lo quiero</a>
+        </div>
+
+        <div class="plan featured">
+          <span class="badge">El más elegido</span>
+          <h3>Negocio</h3>
+          <p class="for">Para negocios que quieren recibir pedidos o citas</p>
+          <div class="price">$4,500 <small>MXN</small></div>
+          <ul>
+            <li>Todo lo del Básico</li>
+            <li>Hasta 5 secciones o páginas</li>
+            <li>Menú o catálogo de servicios con precios</li>
+            <li>Formulario de pedido o cita a WhatsApp</li>
+            <li>SEO básico y alta en Google Maps</li>
+            <li>Conexión de tu dominio propio</li>
+            <li>1 mes de cambios sin costo</li>
+          </ul>
+          <a class="btn btn-primary" href="#contacto">Lo quiero</a>
+        </div>
+
+        <div class="plan">
+          <h3>Tienda o citas</h3>
+          <p class="for">Para vender en línea o agendar automáticamente</p>
+          <div class="price"><small>desde</small> $8,000 <small>MXN</small></div>
+          <ul>
+            <li>Todo lo del plan Negocio</li>
+            <li>Catálogo con carrito o sistema de citas</li>
+            <li>Panel para editar productos y precios</li>
+            <li>Cobros con Mercado Pago o tarjeta</li>
+            <li>Capacitación para usarlo</li>
+          </ul>
+          <a class="btn btn-ghost" href="#contacto">Cotizar</a>
+        </div>
+      </div>
+
+      <div class="extra">
+        <p><strong>Mantenimiento mensual — $400 MXN/mes.</strong> Cambios de precios, fotos, horarios y promociones; hosting y respaldos incluidos.</p>
+        <a class="btn btn-ghost" href="#contacto">Preguntar</a>
+      </div>
+      <p class="note">El dominio (.com o .com.mx) se paga aparte directamente al proveedor, normalmente entre $300 y $600 MXN al año.</p>
+    </div>
+  </section>
+
+  <section id="proceso" style="padding-top:24px">
+    <div class="wrap">
+      <span class="eyebrow">Cómo trabajo</span>
+      <h2 class="section-title">De la plática a tu página en una semana</h2>
+      <div class="steps">
+        <div class="step"><h3>Platicamos</h3><p>Me cuentas de tu negocio por WhatsApp o llamada. Sin costo y sin compromiso.</p></div>
+        <div class="step"><h3>Diseño</h3><p>Con tu 50% de anticipo, en 3–5 días te enseño la primera versión.</p></div>
+        <div class="step"><h3>Ajustes</h3><p>Cambiamos lo que quieras: textos, colores, fotos. Hasta que te encante.</p></div>
+        <div class="step"><h3>¡En línea!</h3><p>Pagas el 50% restante y tu página queda publicada con tu dominio.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:24px">
+    <div class="wrap about">
+      <div class="avatar">JD</div>
+      <div>
+        <span class="eyebrow">Sobre mí</span>
+        <h2 class="section-title">Hola, soy Juan Diego</h2>
+        <p>Estudio Ingeniería en Desarrollo de Software y me dedico a crear páginas web para negocios de Guadalajara y su zona metropolitana. Me gusta que cada sitio sea rápido, fácil de usar y que de verdad le traiga clientes a quien lo contrata. Trato directo conmigo, sin intermediarios: te respondo el mismo día y, si estás en la zona, puedo ir a tu negocio a platicar.</p>
+        <div class="stack"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Git</span><span>SEO</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" style="padding-top:24px">
+    <div class="wrap">
+      <div class="cta">
+        <h2>¿Tu negocio ya tiene página?</h2>
+        <p>Escríbeme y en menos de un día te mando una propuesta con precio fijo para tu negocio.</p>
+        <div class="hero-actions">
+          <a class="btn btn-wa" href="https://wa.me/523327133624?text=Hola%2C%20vi%20tu%20portafolio%20y%20me%20interesa%20una%20p%C3%A1gina%20web" target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
+          <a class="btn btn-ghost" href="mailto:juandiego_3110@hotmail.com">juandiego_3110@hotmail.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© <span id="y"></span> Juan Diego Acosta · Desarrollo web · Guadalajara, Jalisco</div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/523327133624?text=Hola%2C%20vi%20tu%20portafolio%20y%20me%20interesa%20una%20p%C3%A1gina%20web" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.03c-.24.68-1.42 1.32-1.95 1.37-.5.05-1.13.07-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3s.75-2.13 1.02-2.42c.26-.29.58-.36.77-.36h.55c.18 0 .42-.07.65.5.24.58.82 2.01.89 2.15.07.15.12.32.02.51-.1.19-.14.31-.29.48-.14.17-.3.38-.43.51-.14.14-.29.3-.13.59.17.29.74 1.22 1.58 1.97 1.09.97 2 1.27 2.29 1.42.29.14.46.12.63-.07.17-.19.72-.84.92-1.13.19-.29.38-.24.65-.14.26.1 1.68.79 1.97.94.29.14.48.22.55.34.07.12.07.7-.17 1.38z"/></svg>
+</a>
+
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
+</html>
