@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Chakon Barbería · Propuesta de página web</title>
+<meta name="description" content="Propuesta de diseño de página web para Chakon Barbería. Hecha por Juan Diego Acosta.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0d0d0d;--panel:#161616;--panel-2:#1e1e1e;--ink:#f3f0ea;--muted:#a09c94;--gold:#d4a24c;--red:#8e44ad;--line:#2a2a2a;--wa:#1fa855}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.display{font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;letter-spacing:.02em;line-height:.92}
+.gold{color:var(--gold)}
+
+.proposal{background:#f3f0ea;color:#14141a;font:500 .82rem/1.45 system-ui,sans-serif;padding:9px 20px;text-align:center}
+.proposal a{color:#3b3bf5;text-decoration:none;font-weight:600;white-space:nowrap}
+
+nav{display:flex;align-items:center;justify-content:space-between;padding:20px 0;border-bottom:1px solid var(--line);gap:16px}
+.brand{font-family:"Bebas Neue",sans-serif;font-size:1.9rem;letter-spacing:.04em;text-decoration:none;line-height:1;white-space:nowrap}
+.brand span{color:var(--gold)}
+.nav-links{display:flex;gap:30px;list-style:none;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+.nav-links a{text-decoration:none;color:var(--muted)}
+.nav-links a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 26px;font-weight:700;text-decoration:none;letter-spacing:.08em;text-transform:uppercase;font-size:.85rem;border:1px solid var(--gold);transition:background .2s,color .2s;cursor:pointer;font-family:inherit}
+.btn-gold{background:var(--gold);color:#111}
+.btn-gold:hover{background:#e3b763}
+.btn-line{color:var(--gold);background:transparent}
+.btn-line:hover{background:var(--gold);color:#111}
+
+.hero{padding-top:96px;padding-bottom:96px;position:relative;overflow:hidden}
+.hero::before{content:"CB";position:absolute;right:-10px;top:30px;font-family:"Bebas Neue",sans-serif;font-size:min(42vw,420px);line-height:.8;color:transparent;-webkit-text-stroke:2px #262626;pointer-events:none}
+.kicker{font-size:.8rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;display:block;font-weight:600;position:relative}
+.hero h1{font-size:clamp(4rem,13vw,9rem);position:relative}
+.hero h1 span{color:var(--gold)}
+.hero p{color:var(--muted);font-size:1.15rem;max-width:480px;margin:24px 0 34px;position:relative}
+.actions{display:flex;gap:14px;flex-wrap:wrap;position:relative}
+.facts{display:flex;gap:48px;margin-top:60px;flex-wrap:wrap;position:relative}
+.facts b{font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:2.8rem;display:block;color:var(--gold);line-height:1}
+.facts span{color:var(--muted);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase}
+
+section{padding:96px 0;border-top:1px solid var(--line)}
+.head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:44px;flex-wrap:wrap}
+.head h2{font-size:clamp(3rem,7vw,4.6rem)}
+.head p{color:var(--muted);max-width:360px}
+
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.svc{background:var(--bg);padding:30px 26px;display:flex;flex-direction:column;gap:8px;transition:background .2s}
+.svc:hover{background:var(--panel)}
+.svc .num{font-family:"Bebas Neue",sans-serif;color:var(--gold);font-size:1.2rem;letter-spacing:.1em}
+.svc h3{font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:2rem;letter-spacing:.03em;line-height:1}
+.svc p{color:var(--muted);font-size:.93rem}
+.ask{margin-top:28px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;border:1px dashed #3a3a3a;padding:20px 24px}
+.ask p{color:var(--muted)}
+
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.barber{background:var(--panel);border:1px solid var(--line);padding:30px;text-align:center}
+.av{width:96px;height:96px;border-radius:50%;margin:0 auto 18px;display:grid;place-items:center;font-size:2rem;color:var(--gold);border:2px dashed #4a3d24}
+.barber h3{font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:1.8rem;letter-spacing:.03em}
+.barber p{color:var(--muted);font-size:.92rem}
+
+.booking{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.booking h2{font-size:clamp(3rem,7vw,4.6rem)}
+.booking .lead{color:var(--muted);margin:18px 0 26px}
+.info{list-style:none;border-top:1px solid var(--line)}
+.info li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--line);color:var(--muted)}
+.info li b{color:var(--ink);font-weight:500;text-align:right}
+form{background:var(--panel);border:1px solid var(--line);padding:32px;display:grid;gap:18px}
+label{display:grid;gap:8px;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+input,select{font:inherit;font-size:1rem;letter-spacing:0;text-transform:none;font-weight:400;background:var(--panel-2);border:1px solid #333;color:var(--ink);padding:13px 14px;border-radius:0;width:100%;appearance:none;color-scheme:dark}
+select{background-image:linear-gradient(45deg,transparent 50%,var(--gold) 50%),linear-gradient(135deg,var(--gold) 50%,transparent 50%);background-position:calc(100% - 20px) 50%,calc(100% - 14px) 50%;background-size:6px 6px;background-repeat:no-repeat}
+input:focus,select:focus{outline:2px solid var(--gold);outline-offset:1px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form-note{font-size:.82rem;color:var(--muted);text-align:center}
+
+.rating{text-align:center;max-width:640px;margin:0 auto}
+.rating .big{font-family:"Bebas Neue",sans-serif;font-size:8rem;line-height:.9;color:var(--gold)}
+.rating .stars{color:var(--gold);font-size:1.6rem;letter-spacing:6px;margin:6px 0}
+.rating p{color:var(--muted);margin-bottom:26px}
+
+.map{border:1px solid var(--line);min-height:320px;margin-top:40px}
+.map iframe{width:100%;height:100%;min-height:320px;border:0;display:block;filter:grayscale(1) invert(.9) contrast(.9)}
+
+.site-footer{border-top:1px solid var(--line);padding-top:36px;padding-bottom:36px;color:var(--muted);font-size:.88rem;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:30;width:58px;height:58px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 10px 28px -8px rgba(31,168,85,.9)}
+
+@media (max-width:860px){
+  .nav-links{display:none}
+  .services{grid-template-columns:1fr 1fr}
+  .team{grid-template-columns:1fr}
+  .booking{grid-template-columns:1fr;gap:36px}
+}
+@media (max-width:520px){
+  section{padding:68px 0}
+  .hero{padding-top:56px;padding-bottom:64px}
+  .services{grid-template-columns:1fr}
+  .actions .btn{flex:1 1 100%}
+  .facts{gap:28px}
+  .row{grid-template-columns:1fr}
+  form{padding:22px}
+  nav .btn{padding:11px 16px}
+}
+</style>
+</head>
+<body>
+<div class="proposal"><b>Propuesta de diseño para Chakon Barbería</b>, hecha por Juan Diego Acosta. No es el sitio oficial; textos y servicios de ejemplo. · <a href="../../">Ver portafolio</a></div>
+
+<header class="wrap">
+  <nav>
+    <a class="brand" href="#">Chakon <span>Barbería</span></a>
+    <ul class="nav-links">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#barberos">Barberos</a></li>
+      <li><a href="#agenda">Agenda</a></li>
+    </ul>
+    <a class="btn btn-line" href="#agenda">Agendar</a>
+  </nav>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <span class="kicker">Barbería · Zapopan</span>
+    <h1 class="display">Cortes con <span>actitud.</span></h1>
+    <p>Fades, cortes clásicos y barba en Prados Vallarta (A las Colinas 102). Agenda tu lugar por WhatsApp y llega directo a la silla.</p>
+    <div class="actions">
+      <a class="btn btn-gold" href="#agenda">Agenda tu cita</a>
+      <a class="btn btn-line" href="#servicios">Ver servicios</a>
+    </div>
+    <div class="facts">
+      <div><b>4.8★</b><span>en Google</span></div>
+      <div><b>164</b><span>reseñas</span></div>
+      <div><b>ZAP</b><span>Prados Vallarta</span></div>
+    </div>
+  </div>
+
+  <section id="servicios">
+    <div class="wrap">
+      <div class="head">
+        <h2 class="display">Servicios</h2>
+        <p>Cada corte, a tu estilo. Pregunta por precios y disponibilidad por WhatsApp.</p>
+      </div>
+      <div class="services">
+        <div class="svc"><span class="num">01</span><h3>Corte</h3><p>Tijera y máquina, con el estilo que tú quieras.</p></div>
+        <div class="svc"><span class="num">02</span><h3>Fade</h3><p>Degradados limpios: low, mid, high o taper.</p></div>
+        <div class="svc"><span class="num">03</span><h3>Barba</h3><p>Perfilado y arreglo con navaja.</p></div>
+        <div class="svc"><span class="num">04</span><h3>Corte + barba</h3><p>El servicio completo para salir impecable.</p></div>
+        <div class="svc"><span class="num">05</span><h3>Diseños</h3><p>Líneas y diseños con navaja para tu corte.</p></div>
+        <div class="svc"><span class="num">06</span><h3>Corte infantil</h3><p>Para los más chicos, con toda la paciencia.</p></div>
+      </div>
+      <div class="ask">
+        <p>¿Quieres saber precios o si hay lugar hoy?</p>
+        <a class="btn btn-gold" href="https://wa.me/523326497273?text=Hola%2C%20%C2%BFme%20pasan%20precios%20y%20disponibilidad%3F" target="_blank" rel="noopener">Preguntar por WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="barberos">
+    <div class="wrap">
+      <div class="head">
+        <h2 class="display">Los <span class="gold">barberos</span></h2>
+        <p>Aquí presentamos a cada barbero con su foto y su especialidad, para que elijas con quién agendar.</p>
+      </div>
+      <div class="team">
+        <div class="barber"><div class="av">＋</div><h3>Barbero 1</h3><p>Foto, nombre y especialidad.</p></div>
+        <div class="barber"><div class="av">＋</div><h3>Barbero 2</h3><p>Foto, nombre y especialidad.</p></div>
+        <div class="barber"><div class="av">＋</div><h3>Barbero 3</h3><p>Foto, nombre y especialidad.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="agenda">
+    <div class="wrap booking">
+      <div>
+        <h2 class="display">Agenda tu <span class="gold">cita</span></h2>
+        <p class="lead">Elige el servicio, el día y la hora. Te llevamos a WhatsApp con el mensaje listo; solo lo envías y te confirmamos.</p>
+        <ul class="info">
+          <li>Dirección <b>A las Colinas 102, Prados Vallarta</b></li>
+          <li>Teléfono <b><a href="tel:+523326497273">33 2649 7273</a></b></li>
+          <li>Google <b>4.8★ · 164 reseñas</b></li>
+        </ul>
+      </div>
+      <form id="cita">
+        <label>Tu nombre<input name="nombre" required placeholder="¿Cómo te llamas?" autocomplete="given-name"></label>
+        <label>Servicio
+          <select name="servicio">
+            <option>Corte</option>
+            <option>Fade</option>
+            <option>Barba</option>
+            <option selected>Corte + barba</option>
+            <option>Diseños</option>
+            <option>Corte infantil</option>
+          </select>
+        </label>
+        <div class="row">
+          <label>Día<input type="date" name="dia" id="dia" required></label>
+          <label>Hora
+            <select name="hora">
+              <option>10:00</option><option>11:00</option><option>12:00</option><option>13:00</option><option>16:00</option><option>17:00</option><option>18:00</option><option>19:00</option>
+            </select>
+          </label>
+        </div>
+        <button class="btn btn-gold" type="submit">Enviar por WhatsApp</button>
+        <p class="form-note">No necesitas pagar por adelantado.</p>
+      </form>
+    </div>
+  </section>
+
+  <section id="resenas">
+    <div class="wrap">
+      <div class="rating">
+        <span class="kicker" style="margin-bottom:8px">Lo que dicen los clientes</span>
+        <div class="big">4.8</div>
+        <div class="stars">★★★★★</div>
+        <p>164 reseñas en Google</p>
+        <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&query=Chakon%20Barber%C3%ADa%20A%20las%20Colinas%20102%2C%20Prados%20Vallarta%20Zapopan" target="_blank" rel="noopener">Leer las reseñas</a>
+      </div>
+      <div class="map"><iframe title="Mapa de ubicación" loading="lazy" src="https://maps.google.com/maps?q=Chakon%20Barber%C3%ADa%2C%20A%20las%20Colinas%20102%2C%20Prados%20Vallarta%2C%20Zapopan&z=16&output=embed"></iframe></div>
+    </div>
+  </section>
+</main>
+
+<div class="wrap site-footer">
+  <span>Propuesta de diseño para Chakon Barbería</span>
+  <span>Hecha por <a href="../../">Juan Diego Acosta</a> · desarrollo web en Guadalajara</span>
+</div>
+
+<a class="wa-float" href="https://wa.me/523326497273?text=Hola%2C%20quiero%20agendar%20un%20corte" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2z"/></svg>
+</a>
+
+<script>
+const tel = '523326497273';
+const form = document.getElementById('cita');
+const dia = document.getElementById('dia');
+const today = new Date();
+const pad = n => String(n).padStart(2, '0');
+dia.min = `${today.getFullYear()}-${pad(today.getMonth() + 1)}-${pad(today.getDate())}`;
+dia.value = dia.min;
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  const d = new FormData(form);
+  const fecha = new Date(d.get('dia') + 'T12:00').toLocaleDateString('es-MX', {weekday:'long', day:'numeric', month:'long'});
+  const msg = `Hola, soy ${d.get('nombre')}. Quiero agendar: ${d.get('servicio')}, el ${fecha} a las ${d.get('hora')}. ¿Hay lugar?`;
+  window.open(`https://wa.me/${tel}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
+});
+</script>
+</body>
+</html>
